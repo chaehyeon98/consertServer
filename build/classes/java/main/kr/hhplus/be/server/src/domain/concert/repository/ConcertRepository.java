@@ -1,8 +1,6 @@
 package src.domain.concert.repository;
 
-import src.domain.concert.entity.ConcertDateEntity;
-import src.domain.concert.entity.ConcertEntity;
-import src.domain.concert.entity.ConcertSeatEntity;
+import src.domain.concert.entity.*;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -12,5 +10,12 @@ public interface ConcertRepository {
 
     List<ConcertDateEntity> getDate(BigInteger concertId);
 
-    List<ConcertSeatEntity> getSeat(BigInteger seat_id);
+    List<ConcertSeatEntity> getSeatList(BigInteger concert_date_id);
+
+    ConcertSeatEntity getSeat(BigInteger seat_id);
+
+    int insertReservation(ReservationEntity reservation);
+
+    int updateSeat(ReservationEntity reservation);
+
 }

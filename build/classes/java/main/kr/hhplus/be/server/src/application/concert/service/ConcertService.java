@@ -1,9 +1,6 @@
 package src.application.concert.service;
 
-import src.domain.concert.entity.ConcertDateEntity;
-import src.domain.concert.entity.ConcertEntity;
-import src.domain.concert.entity.ConcertSeatEntity;
-import src.domain.concert.entity.UserEntity;
+import src.domain.concert.entity.*;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -14,5 +11,7 @@ public interface ConcertService {
 
     List<ConcertDateEntity> getDate(BigInteger concertId, UserEntity user);
 
-    List<ConcertSeatEntity> getSeat(BigInteger seat_id, UserEntity user);
+    List<ConcertSeatEntity> getSeatList(BigInteger concert_date_id, UserEntity user);
+
+    void getReservation(UserEntity user, BigInteger seat_id);
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import src.domain.concert.entity.ConcertDateEntity;
 import src.domain.concert.entity.ConcertEntity;
 import src.domain.concert.entity.ConcertSeatEntity;
+import src.domain.concert.entity.ReservationEntity;
 import src.domain.concert.repository.ConcertRepository;
 
 import java.math.BigInteger;
@@ -23,7 +24,22 @@ public class ConcertRepositoryImpl implements ConcertRepository {
     }
 
     @Override
-    public List<ConcertSeatEntity> getSeat(BigInteger seat_id) {
+    public List<ConcertSeatEntity> getSeatList(BigInteger concert_date_id) {
         return List.of();
+    }
+
+    @Override
+    public ConcertSeatEntity getSeat(BigInteger seat_id) {
+        return null;
+    }
+
+    @Override
+    public int insertReservation(ReservationEntity reservation) {
+        return 0;
+    }
+
+    @Override
+    public int updateSeat(ReservationEntity reservation) {
+        return 0;
     }
 }

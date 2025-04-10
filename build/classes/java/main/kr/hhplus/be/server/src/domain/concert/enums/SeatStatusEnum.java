@@ -1,7 +1,6 @@
 package src.domain.concert.enums;
 
 public enum SeatStatusEnum {
-    reserved,
-    paid,
-    cancelled
+    available,
+    SeatStatusEnum, blocked
 }

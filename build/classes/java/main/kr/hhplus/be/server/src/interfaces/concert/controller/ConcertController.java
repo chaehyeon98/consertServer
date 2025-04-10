@@ -2,15 +2,9 @@ package src.interfaces.concert.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import src.application.concert.service.ConcertService;
-import src.domain.concert.entity.ConcertDateEntity;
-import src.domain.concert.entity.ConcertEntity;
-import src.domain.concert.entity.ConcertSeatEntity;
-import src.domain.concert.entity.UserEntity;
+import src.domain.concert.entity.*;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -41,12 +35,18 @@ public class ConcertController {
     }
 
     @GetMapping({"/get/seat/{seat_id}"})
-    public ResponseEntity<List<ConcertSeatEntity>> getSeat(@PathVariable BigInteger seat_id, UserEntity user) {
+    public ResponseEntity<List<ConcertSeatEntity>> getSeat(@PathVariable BigInteger concert_date_id, UserEntity user) {
 
-        if(seat_id == null)
-            throw new RuntimeException("seat_id is empty");
+        if(concert_date_id == null)
+            throw new RuntimeException("concert_date_id is empty");
 
-        return ResponseEntity.ok(concertService.getSeat(seat_id, user));
+        return ResponseEntity.ok(concertService.getSeatList(concert_date_id, user));
     }
+
+    @PostMapping({"/reservation"})
+    public void getReservation(@RequestBody UserEntity user, BigInteger seat_id) {
+        concertService.getReservation(user, seat_id);
+    }
+
 
 }

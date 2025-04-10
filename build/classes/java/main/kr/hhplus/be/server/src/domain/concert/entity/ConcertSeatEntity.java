@@ -12,7 +12,17 @@ public class ConcertSeatEntity {
 
     private long price;
 
-    private SeatStatusEnum status = SeatStatusEnum.reserved;
+    private SeatStatusEnum status = SeatStatusEnum.available;
+
+    private BigInteger seat_number;
+
+    public BigInteger getSeat_number() {
+        return seat_number;
+    }
+
+    public void setSeat_number(BigInteger seat_number) {
+        this.seat_number = seat_number;
+    }
 
     public long getPrice() {
         return price;
