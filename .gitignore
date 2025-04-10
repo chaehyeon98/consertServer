@@ -34,3 +34,5 @@ out/
 .vscode/
 
 data
+/build/reports/tests
+/build/tmp/
