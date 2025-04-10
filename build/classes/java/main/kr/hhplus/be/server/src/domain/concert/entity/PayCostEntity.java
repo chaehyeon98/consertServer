@@ -1,10 +1,10 @@
 package src.domain.concert.entity;
 
+import java.math.BigInteger;
+
 public class PayCostEntity {
 
-    private int rcpnum;
-
-    private String cost_cod;
+    private BigInteger rcpnum;
 
     private long amount;
 
@@ -26,19 +26,11 @@ public class PayCostEntity {
         this.amount = amount;
     }
 
-    public String getCost_cod() {
-        return cost_cod;
-    }
-
-    public void setCost_cod(String cost_cod) {
-        this.cost_cod = cost_cod;
-    }
-
-    public int getRcpnum() {
+    public BigInteger getRcpnum() {
         return rcpnum;
     }
 
-    public void setRcpnum(int rcpnum) {
+    public void setRcpnum(BigInteger rcpnum) {
         this.rcpnum = rcpnum;
     }
 }

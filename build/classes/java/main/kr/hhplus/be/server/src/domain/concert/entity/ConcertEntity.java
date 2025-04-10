@@ -1,38 +1,26 @@
 package src.domain.concert.entity;
 
-import java.util.Date;
+import java.math.BigInteger;
 
 public class ConcertEntity {
 
-    private int user_id;
+    private BigInteger concert_id;
 
-    private String token;
+    private String concert_name;
 
-    public Date getToken_expiration_time() {
-        return token_expiration_time;
+    public String getConcert_name() {
+        return concert_name;
     }
 
-    public void setToken_expiration_time(Date token_expiration_time) {
-        this.token_expiration_time = token_expiration_time;
+    public void setConcert_name(String concert_name) {
+        this.concert_name = concert_name;
     }
 
-    private Date token_expiration_time;
-
-    public String getToken() {
-        return token;
+    public BigInteger getConcert_id() {
+        return concert_id;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setConcert_id(BigInteger concert_id) {
+        this.concert_id = concert_id;
     }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
-
-
 }
