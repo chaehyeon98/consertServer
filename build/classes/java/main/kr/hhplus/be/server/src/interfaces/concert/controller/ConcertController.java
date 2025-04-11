@@ -21,7 +21,7 @@ public class ConcertController {
     }
 
     @GetMapping({"/get"})
-    public ResponseEntity<ConcertEntity> getConcert(String name) {
+    public ResponseEntity<List<ConcertEntity>> getConcert(String name) {
         return ResponseEntity.ok(concertService.getConcert(name));
     }
 
@@ -44,8 +44,8 @@ public class ConcertController {
     }
 
     @PostMapping({"/reservation"})
-    public void getReservation(@RequestBody UserEntity user, BigInteger seat_id) {
-        concertService.getReservation(user, seat_id);
+    public ResponseEntity<ReservationEntity>  getReservation(@RequestBody UserEntity user, BigInteger seat_id) {
+        return ResponseEntity.ok(concertService.getReservation(user, seat_id));
     }
 
 

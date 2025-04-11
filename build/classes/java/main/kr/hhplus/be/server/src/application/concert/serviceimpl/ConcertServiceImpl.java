@@ -1,6 +1,7 @@
 package src.application.concert.serviceimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import src.application.concert.service.ConcertService;
 import src.application.concert.service.TokenService;
 import src.domain.concert.entity.*;
@@ -9,6 +10,7 @@ import src.domain.concert.repository.ConcertRepository;
 import java.math.BigInteger;
 import java.util.List;
 
+@Service
 public class ConcertServiceImpl  implements ConcertService {
 
     @Autowired
@@ -21,7 +23,7 @@ public class ConcertServiceImpl  implements ConcertService {
     }
 
     @Override
-    public ConcertEntity getConcert(String name) {
+    public List<ConcertEntity> getConcert(String name) {
 
         return repo.getConcert(name);
     }
@@ -43,7 +45,7 @@ public class ConcertServiceImpl  implements ConcertService {
     }
 
     @Override
-    public void getReservation(UserEntity user, BigInteger seat_id) {
+    public ReservationEntity getReservation(UserEntity user, BigInteger seat_id) {
 
         tokenService.validateToken(user);
 
@@ -58,5 +60,7 @@ public class ConcertServiceImpl  implements ConcertService {
         if(repo.insertReservation(reservation) <= 0){
             throw new IllegalArgumentException("좌석 예약 오류");
         }
+
+        return reservation;
     }
 }

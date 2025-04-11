@@ -5,4 +5,6 @@ import src.domain.concert.entity.UserEntity;
 public interface TokenService {
 
     UserEntity validateToken(UserEntity user);
+
+    void deleteToken(UserEntity user);
 }

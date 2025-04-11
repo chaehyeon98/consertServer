@@ -46,8 +46,8 @@ public class ReservationEntity {
         return status;
     }
 
-    public void setStatus(ConcertSeatEntity concertSeatEntity) {
-        this.status = ReservationStatusEnum.reserved;
+    public void setStatus(ReservationStatusEnum status) {
+        this.status = status;
     }
 
     public BigInteger getUser_id() {

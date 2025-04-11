@@ -12,4 +12,8 @@ public class TokenServiceImpl implements TokenService {
     public UserEntity validateToken(UserEntity user) {
         return null;
     }
+
+    @Override
+    public void deleteToken(UserEntity user) {
+    }
 }

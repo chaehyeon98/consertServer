@@ -14,7 +14,7 @@ import java.util.List;
 @Repository
 public class ConcertRepositoryImpl implements ConcertRepository {
     @Override
-    public ConcertEntity getConcert(String name) {
+    public List<ConcertEntity> getConcert(String name) {
         return null;
     }
 

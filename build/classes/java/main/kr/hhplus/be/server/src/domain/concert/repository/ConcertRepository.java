@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 public interface ConcertRepository {
-    ConcertEntity getConcert(String name);
+    List<ConcertEntity> getConcert(String name);
 
     List<ConcertDateEntity> getDate(BigInteger concertId);
 
