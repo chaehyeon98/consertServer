@@ -1,11 +1,12 @@
-package kr.hhplus.be.server.application.concert.serviceimpl;
+package kr.hhplus.be.server.domain.concert.serviceimpl;
 
-import kr.hhplus.be.server.application.concert.service.ConcertService;
+import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
+import kr.hhplus.be.server.domain.concert.service.ConcertService;
 import kr.hhplus.be.server.domain.concert.entity.*;
 import kr.hhplus.be.server.domain.concert.repository.ConcertRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import kr.hhplus.be.server.application.concert.service.TokenService;
+import kr.hhplus.be.server.domain.concert.service.TokenService;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -51,9 +52,11 @@ public class ConcertServiceImpl  implements ConcertService {
 
         ConcertSeat seat = repo.getSeat(seat_id);
 
+        seat.setStatus(SeatStatusEnum.blocked);
+
         Reservation reservation = new Reservation(seat.getSeat_id(), user.getUser_id(), seat.getSeat_number(), seat.getStatus());
 
-        if(repo.updateSeat(reservation) <= 0){
+        if(repo.updateSeat(seat) <= 0){
             throw new IllegalArgumentException("좌석 예약 오류");
         }
 
@@ -62,5 +65,20 @@ public class ConcertServiceImpl  implements ConcertService {
         }
 
         return reservation;
+    }
+
+    @Override
+    public ConcertSeat getConcertSeat(BigInteger seat_id) {
+        return repo.getSeat(seat_id);
+    }
+
+    @Override
+    public void setStatus(ConcertSeat concertSeat) {
+        concertSeat.setStatus(SeatStatusEnum.blocked);
+
+        if(repo.updateSeat(concertSeat) <= 0) {
+
+            throw new IllegalArgumentException("좌석상태 변경 오류");
+        }
     }
 }

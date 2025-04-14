@@ -25,6 +25,18 @@ public class ConcertSeat {
     @Column(nullable = false)
     private BigInteger seat_number;
 
+    public ConcertSeat() {
+
+    }
+
+    public ConcertSeat(BigInteger seat_id, String concert_date_id, long price, SeatStatusEnum status, BigInteger seat_number) {
+        this.seat_id = seat_id;
+        this.concert_date_id = concert_date_id;
+        this.price = price;
+        this.status = status;
+        this.seat_number = seat_number;
+    }
+
     public BigInteger getSeat_number() {
         return seat_number;
     }
@@ -39,5 +51,9 @@ public class ConcertSeat {
 
     public SeatStatusEnum getStatus() {
         return status;
+    }
+
+    public void setStatus(SeatStatusEnum status) {
+        this.status = status;
     }
 }

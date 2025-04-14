@@ -1,9 +1,9 @@
-package kr.hhplus.be.server.application.user.serviceimpl;
+package kr.hhplus.be.server.domain.concert.serviceimpl;
 
-import kr.hhplus.be.server.domain.user.entity.Balance;
-import kr.hhplus.be.server.domain.user.repository.UserRepository;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
+import kr.hhplus.be.server.domain.concert.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import kr.hhplus.be.server.application.user.service.UserService;
+import kr.hhplus.be.server.domain.concert.service.UserService;
 
 import java.math.BigInteger;
 

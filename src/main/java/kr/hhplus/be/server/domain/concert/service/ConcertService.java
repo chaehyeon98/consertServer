@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.application.concert.service;
+package kr.hhplus.be.server.domain.concert.service;
 
 import kr.hhplus.be.server.domain.concert.entity.*;
 
@@ -14,4 +14,8 @@ public interface ConcertService {
     List<ConcertSeat> getSeatList(BigInteger concert_date_id, User user);
 
     Reservation getReservation(User user, BigInteger seat_id);
+
+    ConcertSeat getConcertSeat(BigInteger seat_id);
+
+    void setStatus(ConcertSeat concertSeat);
 }

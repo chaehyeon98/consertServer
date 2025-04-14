@@ -1,10 +1,9 @@
-package kr.hhplus.be.server.domain.user.entity;
+package kr.hhplus.be.server.domain.concert.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
 
 @Entity
 @Table(name = "Balance")

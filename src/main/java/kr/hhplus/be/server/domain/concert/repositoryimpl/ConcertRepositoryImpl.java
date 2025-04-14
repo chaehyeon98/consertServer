@@ -39,6 +39,11 @@ public class ConcertRepositoryImpl implements ConcertRepository {
     }
 
     @Override
+    public int updateSeat(ConcertSeat concertSeat) {
+        return 0;
+    }
+
+    @Override
     public int updateSeat(Reservation reservation) {
         return 0;
     }

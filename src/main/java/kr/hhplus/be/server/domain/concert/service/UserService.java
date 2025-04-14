@@ -1,6 +1,6 @@
-package kr.hhplus.be.server.application.user.service;
+package kr.hhplus.be.server.domain.concert.service;
 
-import kr.hhplus.be.server.domain.user.entity.Balance;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
 
 import java.math.BigInteger;
 

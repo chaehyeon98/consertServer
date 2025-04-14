@@ -1,7 +1,7 @@
-package kr.hhplus.be.server.domain.user.repositoryimpl;
+package kr.hhplus.be.server.domain.concert.repositoryimpl;
 
-import kr.hhplus.be.server.domain.user.entity.Balance;
-import kr.hhplus.be.server.domain.user.repository.UserRepository;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
+import kr.hhplus.be.server.domain.concert.repository.UserRepository;
 
 import java.math.BigInteger;
 

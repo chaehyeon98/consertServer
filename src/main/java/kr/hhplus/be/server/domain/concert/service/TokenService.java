@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.application.concert.service;
+package kr.hhplus.be.server.domain.concert.service;
 
 import kr.hhplus.be.server.domain.concert.entity.User;
 

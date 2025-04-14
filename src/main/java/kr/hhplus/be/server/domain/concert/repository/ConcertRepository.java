@@ -19,6 +19,7 @@ public interface ConcertRepository {
 
     int insertReservation(Reservation reservation);
 
-    int updateSeat(Reservation reservation);
+    int updateSeat(ConcertSeat concertSeat);
 
+    int updateSeat(Reservation reservation);
 }
