@@ -1,12 +1,24 @@
 package kr.hhplus.be.server.domain.user.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
 
+@Entity
+@Table(name = "Balance")
 public class Balance {
 
+    @Id
+    private int user_id;
+
+    @Column(columnDefinition = "MONEY DEFAULT 0")
     private long amount;
 
-    private int user_id;
+    public Balance() {
+
+    }
 
     public Balance(int user_id, long amount) {
         this.user_id = user_id;
@@ -22,14 +34,6 @@ public class Balance {
         }
 
         amount -= seatEntity.getPrice();
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public long getAmount() {
-        return amount;
     }
 
     public void setAmount(long amount) {

@@ -1,21 +1,34 @@
 package kr.hhplus.be.server.domain.concert.entity;
 
+import jakarta.persistence.*;
 import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
 import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 import java.math.BigInteger;
 
+@Entity
+@Table(name = "Reservation")
 public class Reservation {
 
+    @Id
     private BigInteger reservation_id;
 
+    @JoinColumn(nullable = false)
     private BigInteger seat_id;
 
+    @JoinColumn(nullable = false)
     private BigInteger user_id;
 
+    @Enumerated(EnumType.STRING)
+    @Column
     private ReservationStatusEnum status;
 
+    @Column(nullable = false)
     private BigInteger seat_number;
+
+    public Reservation() {
+
+    }
 
     public Reservation(BigInteger seat_id, BigInteger user_id, BigInteger seat_number, SeatStatusEnum status) {
 
@@ -34,28 +47,11 @@ public class Reservation {
 
     }
 
-    public BigInteger getSeat_number() {
-        return seat_number;
-    }
-
-    public ReservationStatusEnum getStatus() {
-        return status;
-    }
-
     public void setStatus(ReservationStatusEnum status) {
         this.status = status;
     }
-
-    public BigInteger getUser_id() {
-        return user_id;
-    }
-
     public BigInteger getSeat_id() {
         return seat_id;
-    }
-
-    public BigInteger getReservation_id() {
-        return reservation_id;
     }
 
 }

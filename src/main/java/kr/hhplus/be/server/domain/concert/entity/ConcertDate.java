@@ -1,25 +1,20 @@
 package kr.hhplus.be.server.domain.concert.entity;
 
+import jakarta.persistence.*;
+
 import java.math.BigInteger;
 import java.util.Date;
 
+@Entity
+@Table(name = "ConcertDate")
 public class ConcertDate {
 
+    @Id
     private BigInteger concert_date_id;
 
+    @JoinColumn(nullable = false)
     private BigInteger concert_id;
 
+    @Column(nullable = false)
     private Date concert_date;
-
-    public Date getConcert_date() {
-        return concert_date;
-    }
-
-    public BigInteger getConcert_id() {
-        return concert_id;
-    }
-
-    public BigInteger getConcert_date_id() {
-        return concert_date_id;
-    }
 }
