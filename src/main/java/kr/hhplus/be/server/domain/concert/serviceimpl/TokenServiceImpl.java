@@ -1,8 +1,8 @@
 package domain.concert.serviceimpl;
 
 import domain.concert.entity.User;
-import org.springframework.stereotype.Service;
 import domain.concert.service.TokenService;
+import org.springframework.stereotype.Service;
 
 @Service
 public class TokenServiceImpl implements TokenService {

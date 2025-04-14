@@ -1,7 +1,7 @@
 package domain.concert.entity;
 
-import jakarta.persistence.*;
 import domain.concert.enums.SeatStatusEnum;
+import jakarta.persistence.*;
 
 import java.math.BigInteger;
 

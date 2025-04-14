@@ -2,8 +2,8 @@ package domain.concert.serviceimpl;
 
 import domain.concert.entity.Balance;
 import domain.concert.repository.UserRepository;
-import org.springframework.stereotype.Service;
 import domain.concert.service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 

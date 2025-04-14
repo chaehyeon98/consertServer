@@ -1,7 +1,7 @@
 package domain.concert.repository;
 
-import domain.concert.entity.Reservation;
 import domain.concert.entity.Balance;
+import domain.concert.entity.Reservation;
 
 public interface ConcertPayRepository {
     int updateBalance(Balance balanceEntity);
