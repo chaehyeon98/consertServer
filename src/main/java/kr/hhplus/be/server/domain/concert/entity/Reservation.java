@@ -5,7 +5,7 @@ import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 import java.math.BigInteger;
 
-public class ReservationEntity {
+public class Reservation {
 
     private BigInteger reservation_id;
 
@@ -17,7 +17,7 @@ public class ReservationEntity {
 
     private BigInteger seat_number;
 
-    public ReservationEntity(BigInteger seat_id, BigInteger user_id, BigInteger seat_number, SeatStatusEnum status) {
+    public Reservation(BigInteger seat_id, BigInteger user_id, BigInteger seat_number, SeatStatusEnum status) {
 
         if (status == SeatStatusEnum.blocked) {
             throw new IllegalArgumentException("예약 불가");

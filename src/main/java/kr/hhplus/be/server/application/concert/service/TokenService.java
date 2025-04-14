@@ -1,10 +1,10 @@
 package kr.hhplus.be.server.application.concert.service;
 
-import kr.hhplus.be.server.domain.concert.entity.UserEntity;
+import kr.hhplus.be.server.domain.concert.entity.User;
 
 public interface TokenService {
 
-    UserEntity validateToken(UserEntity user);
+    User validateToken(User user);
 
-    void deleteToken(UserEntity user);
+    void deleteToken(User user);
 }

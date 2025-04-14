@@ -1,18 +1,18 @@
 package kr.hhplus.be.server.application.concert.serviceimpl;
 
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeatEntity;
+import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
 import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
 import kr.hhplus.be.server.domain.concert.repository.ConcertPayRepository;
 import kr.hhplus.be.server.domain.concert.repository.ConcertRepository;
-import kr.hhplus.be.server.domain.user.entity.BalanceEntity;
+import kr.hhplus.be.server.domain.user.entity.Balance;
 import kr.hhplus.be.server.domain.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import kr.hhplus.be.server.application.concert.service.ConcertPayService;
 import kr.hhplus.be.server.application.concert.service.TokenService;
 
-import kr.hhplus.be.server.domain.concert.entity.ReservationEntity;
-import kr.hhplus.be.server.domain.concert.entity.UserEntity;
+import kr.hhplus.be.server.domain.concert.entity.Reservation;
+import kr.hhplus.be.server.domain.concert.entity.User;
 
 @Service
 public class ConcertPayServiceImpl implements ConcertPayService {
@@ -27,11 +27,11 @@ public class ConcertPayServiceImpl implements ConcertPayService {
     private ConcertRepository concertRepository;
 
     @Override
-    public ReservationEntity pay(UserEntity user, ReservationEntity reservation) {
+    public Reservation pay(User user, Reservation reservation) {
 
-        ConcertSeatEntity concertSeatEntity = concertRepository.getSeat(reservation.getSeat_id());
+        ConcertSeat concertSeatEntity = concertRepository.getSeat(reservation.getSeat_id());
 
-        BalanceEntity balanceEntity = userRepository.getBalance(user.getUser_id());
+        Balance balanceEntity = userRepository.getBalance(user.getUser_id());
 
         concertPayRepository.updateBalance(balanceEntity);
 

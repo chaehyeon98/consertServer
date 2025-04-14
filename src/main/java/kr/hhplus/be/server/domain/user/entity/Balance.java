@@ -1,19 +1,19 @@
 package kr.hhplus.be.server.domain.user.entity;
 
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeatEntity;
+import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
 
-public class BalanceEntity {
+public class Balance {
 
     private long amount;
 
     private int user_id;
 
-    public BalanceEntity(int user_id, long amount) {
+    public Balance(int user_id, long amount) {
         this.user_id = user_id;
         this.amount = amount;
     }
 
-    public void use(ConcertSeatEntity seatEntity) {
+    public void use(ConcertSeat seatEntity) {
 
         if(amount <= 0) {
             throw new IllegalArgumentException("Amount must be greater than 0");

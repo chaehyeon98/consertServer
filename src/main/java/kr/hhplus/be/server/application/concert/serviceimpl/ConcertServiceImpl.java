@@ -23,13 +23,13 @@ public class ConcertServiceImpl  implements ConcertService {
     }
 
     @Override
-    public List<ConcertEntity> getConcert(String name) {
+    public List<Concert> getConcert(String name) {
 
         return repo.getConcert(name);
     }
 
     @Override
-    public List<ConcertDateEntity> getDate(BigInteger concertId, UserEntity user){
+    public List<ConcertDate> getDate(BigInteger concertId, User user){
 
         tokenService.validateToken(user);
 
@@ -37,7 +37,7 @@ public class ConcertServiceImpl  implements ConcertService {
     }
 
     @Override
-    public List<ConcertSeatEntity> getSeatList(BigInteger concert_date_id, UserEntity user) {
+    public List<ConcertSeat> getSeatList(BigInteger concert_date_id, User user) {
 
         tokenService.validateToken(user);
 
@@ -45,13 +45,13 @@ public class ConcertServiceImpl  implements ConcertService {
     }
 
     @Override
-    public ReservationEntity getReservation(UserEntity user, BigInteger seat_id) {
+    public Reservation getReservation(User user, BigInteger seat_id) {
 
         tokenService.validateToken(user);
 
-        ConcertSeatEntity seat = repo.getSeat(seat_id);
+        ConcertSeat seat = repo.getSeat(seat_id);
 
-        ReservationEntity reservation = new ReservationEntity(seat.getSeat_id(), user.getUser_id(), seat.getSeat_number(), seat.getStatus());
+        Reservation reservation = new Reservation(seat.getSeat_id(), user.getUser_id(), seat.getSeat_number(), seat.getStatus());
 
         if(repo.updateSeat(reservation) <= 0){
             throw new IllegalArgumentException("좌석 예약 오류");

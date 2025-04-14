@@ -2,7 +2,7 @@ package kr.hhplus.be.server.domain.concert.entity;
 
 import java.math.BigInteger;
 
-public class ConcertEntity {
+public class Concert {
 
     private BigInteger concert_id;
 

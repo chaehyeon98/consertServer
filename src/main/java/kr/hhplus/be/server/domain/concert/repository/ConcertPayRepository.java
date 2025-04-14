@@ -1,10 +1,10 @@
 package kr.hhplus.be.server.domain.concert.repository;
 
-import kr.hhplus.be.server.domain.concert.entity.ReservationEntity;
-import kr.hhplus.be.server.domain.user.entity.BalanceEntity;
+import kr.hhplus.be.server.domain.concert.entity.Reservation;
+import kr.hhplus.be.server.domain.user.entity.Balance;
 
 public interface ConcertPayRepository {
-    int updateBalance(BalanceEntity balanceEntity);
+    int updateBalance(Balance balanceEntity);
 
-    int insert(ReservationEntity reservation);
+    int insert(Reservation reservation);
 }

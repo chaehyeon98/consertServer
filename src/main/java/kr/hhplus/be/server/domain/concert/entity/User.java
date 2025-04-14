@@ -3,7 +3,7 @@ package kr.hhplus.be.server.domain.concert.entity;
 import java.math.BigInteger;
 import java.util.Date;
 
-public class UserEntity {
+public class User {
 
     private BigInteger user_id;
 

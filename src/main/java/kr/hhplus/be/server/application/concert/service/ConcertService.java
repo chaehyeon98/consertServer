@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface ConcertService {
 
-    List<ConcertEntity> getConcert(String name);
+    List<Concert> getConcert(String name);
 
-    List<ConcertDateEntity> getDate(BigInteger concertId, UserEntity user);
+    List<ConcertDate> getDate(BigInteger concertId, User user);
 
-    List<ConcertSeatEntity> getSeatList(BigInteger concert_date_id, UserEntity user);
+    List<ConcertSeat> getSeatList(BigInteger concert_date_id, User user);
 
-    ReservationEntity getReservation(UserEntity user, BigInteger seat_id);
+    Reservation getReservation(User user, BigInteger seat_id);
 }

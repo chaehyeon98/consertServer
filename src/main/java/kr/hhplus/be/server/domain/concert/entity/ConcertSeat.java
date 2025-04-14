@@ -4,7 +4,7 @@ import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 import java.math.BigInteger;
 
-public class ConcertSeatEntity {
+public class ConcertSeat {
 
     private BigInteger seat_id;
 
