@@ -36,3 +36,4 @@ out/
 data
 /build/reports/tests
 /build/tmp/
+/build/classes/

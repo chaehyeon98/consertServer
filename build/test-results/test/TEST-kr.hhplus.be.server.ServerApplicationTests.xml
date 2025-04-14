@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kr.hhplus.be.server.ServerApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-14T12:10:23" hostname="DESKTOP-AI51V6H" time="0.441">
+<testsuite name="kr.hhplus.be.server.ServerApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-14T13:21:18" hostname="DESKTOP-AI51V6H" time="0.442">
   <properties/>
-  <testcase name="contextLoads()" classname="kr.hhplus.be.server.ServerApplicationTests" time="0.441"/>
-  <system-out><![CDATA[12:09:35.929 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kr.hhplus.be.server.ServerApplicationTests]: ServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:09:36.049 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kr.hhplus.be.server.ServerApplication for test class kr.hhplus.be.server.ServerApplicationTests
+  <testcase name="contextLoads()" classname="kr.hhplus.be.server.ServerApplicationTests" time="0.442"/>
+  <system-out><![CDATA[13:20:31.066 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kr.hhplus.be.server.ServerApplicationTests]: ServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:20:31.198 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kr.hhplus.be.server.ServerApplication for test class kr.hhplus.be.server.ServerApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,42 +14,42 @@
 
  :: Spring Boot ::                (v3.4.1)
 
-2025-04-14T12:09:36.451Z  INFO 19716 --- [hhplus] [    Test worker] k.h.be.server.ServerApplicationTests     : Starting ServerApplicationTests using Java 18.0.2.1 with PID 19716 (started by chae6 in D:\workspace\server-java)
-2025-04-14T12:09:36.452Z  INFO 19716 --- [hhplus] [    Test worker] k.h.be.server.ServerApplicationTests     : The following 1 profile is active: "local"
-2025-04-14T12:09:37.462Z  INFO 19716 --- [hhplus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-14T12:09:37.478Z  INFO 19716 --- [hhplus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-2025-04-14T12:09:38.110Z  INFO 19716 --- [hhplus] [    Test worker] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
-2025-04-14T12:09:38.113Z  INFO 19716 --- [hhplus] [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
-2025-04-14T12:09:38.123Z  INFO 19716 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Testcontainers version: 1.20.4
-2025-04-14T12:09:38.290Z  INFO 19716 --- [hhplus] [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
-2025-04-14T12:09:38.514Z  INFO 19716 --- [hhplus] [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
-2025-04-14T12:09:38.516Z  INFO 19716 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
-2025-04-14T12:09:38.527Z  INFO 19716 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+2025-04-14T13:20:31.618Z  INFO 1352 --- [hhplus] [    Test worker] k.h.be.server.ServerApplicationTests     : Starting ServerApplicationTests using Java 18.0.2.1 with PID 1352 (started by chae6 in D:\workspace\server-java)
+2025-04-14T13:20:31.621Z  INFO 1352 --- [hhplus] [    Test worker] k.h.be.server.ServerApplicationTests     : The following 1 profile is active: "local"
+2025-04-14T13:20:32.194Z  INFO 1352 --- [hhplus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-14T13:20:32.204Z  INFO 1352 --- [hhplus] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2025-04-14T13:20:32.602Z  INFO 1352 --- [hhplus] [    Test worker] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2025-04-14T13:20:32.604Z  INFO 1352 --- [hhplus] [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-04-14T13:20:32.613Z  INFO 1352 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Testcontainers version: 1.20.4
+2025-04-14T13:20:32.754Z  INFO 1352 --- [hhplus] [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-04-14T13:20:32.969Z  INFO 1352 --- [hhplus] [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-04-14T13:20:32.970Z  INFO 1352 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2025-04-14T13:20:32.982Z  INFO 1352 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
   Server Version: 28.0.1
   API Version: 1.48
   Operating System: Docker Desktop
   Total Memory: 15959 MB
   Labels: 
     com.docker.desktop.address=npipe://\\.\pipe\docker_cli
-2025-04-14T12:09:38.545Z  INFO 19716 --- [hhplus] [    Test worker] tc.testcontainers/ryuk:0.11.0            : Creating container for image: testcontainers/ryuk:0.11.0
-2025-04-14T12:09:38.948Z  INFO 19716 --- [hhplus] [    Test worker] tc.testcontainers/ryuk:0.11.0            : Container testcontainers/ryuk:0.11.0 is starting: a151f68e8dee6ad64f7e76a735033491eebb19f3f3ca44bd20978e42bbce4305
-2025-04-14T12:09:39.493Z  INFO 19716 --- [hhplus] [    Test worker] tc.testcontainers/ryuk:0.11.0            : Container testcontainers/ryuk:0.11.0 started in PT0.9476556S
-2025-04-14T12:09:39.500Z  INFO 19716 --- [hhplus] [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
-2025-04-14T12:09:39.500Z  INFO 19716 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
-2025-04-14T12:09:39.500Z  INFO 19716 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
-2025-04-14T12:09:39.502Z  INFO 19716 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Creating container for image: mysql:8.0
-2025-04-14T12:09:39.808Z  INFO 19716 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Container mysql:8.0 is starting: b100520c53a3886726a15bbaeb92c1470689160e8cec03540984c17272b8671c
-2025-04-14T12:09:40.219Z  INFO 19716 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Waiting for database connection to become available at jdbc:mysql://localhost:7650/hhplus using query 'SELECT 1'
-2025-04-14T12:10:20.026Z  INFO 19716 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Container mysql:8.0 started in PT40.523647S
-2025-04-14T12:10:20.026Z  INFO 19716 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Container is started (JDBC URL: jdbc:mysql://localhost:7650/hhplus)
-2025-04-14T12:10:20.532Z  INFO 19716 --- [hhplus] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-14T12:10:20.587Z  INFO 19716 --- [hhplus] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
-2025-04-14T12:10:20.622Z  INFO 19716 --- [hhplus] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-14T12:10:20.832Z  INFO 19716 --- [hhplus] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-14T12:10:20.853Z  INFO 19716 --- [hhplus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HangHaePlusDataSource - Starting...
-2025-04-14T12:10:20.981Z  INFO 19716 --- [hhplus] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HangHaePlusDataSource - Added connection com.mysql.cj.jdbc.ConnectionImpl@600b3bee
-2025-04-14T12:10:20.983Z  INFO 19716 --- [hhplus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HangHaePlusDataSource - Start completed.
-2025-04-14T12:10:21.055Z  INFO 19716 --- [hhplus] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-04-14T13:20:32.998Z  INFO 1352 --- [hhplus] [    Test worker] tc.testcontainers/ryuk:0.11.0            : Creating container for image: testcontainers/ryuk:0.11.0
+2025-04-14T13:20:33.438Z  INFO 1352 --- [hhplus] [    Test worker] tc.testcontainers/ryuk:0.11.0            : Container testcontainers/ryuk:0.11.0 is starting: cebe8a53850275215cf50036c1419f1ba8e912278ca095e11e302d756a333729
+2025-04-14T13:20:33.996Z  INFO 1352 --- [hhplus] [    Test worker] tc.testcontainers/ryuk:0.11.0            : Container testcontainers/ryuk:0.11.0 started in PT0.9984358S
+2025-04-14T13:20:34.004Z  INFO 1352 --- [hhplus] [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-04-14T13:20:34.004Z  INFO 1352 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2025-04-14T13:20:34.005Z  INFO 1352 --- [hhplus] [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2025-04-14T13:20:34.007Z  INFO 1352 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Creating container for image: mysql:8.0
+2025-04-14T13:20:34.338Z  INFO 1352 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Container mysql:8.0 is starting: 4c055bdbc206b3ce09e9dc50438d03e2ae36f8243dcaf39fd10d445bc3d87fcb
+2025-04-14T13:20:34.774Z  INFO 1352 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Waiting for database connection to become available at jdbc:mysql://localhost:9633/hhplus using query 'SELECT 1'
+2025-04-14T13:21:15.154Z  INFO 1352 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Container mysql:8.0 started in PT41.1473409S
+2025-04-14T13:21:15.154Z  INFO 1352 --- [hhplus] [    Test worker] tc.mysql:8.0                             : Container is started (JDBC URL: jdbc:mysql://localhost:9633/hhplus)
+2025-04-14T13:21:15.703Z  INFO 1352 --- [hhplus] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-14T13:21:15.760Z  INFO 1352 --- [hhplus] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-04-14T13:21:15.793Z  INFO 1352 --- [hhplus] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-14T13:21:16.030Z  INFO 1352 --- [hhplus] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-14T13:21:16.052Z  INFO 1352 --- [hhplus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HangHaePlusDataSource - Starting...
+2025-04-14T13:21:16.200Z  INFO 1352 --- [hhplus] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HangHaePlusDataSource - Added connection com.mysql.cj.jdbc.ConnectionImpl@53fd59d4
+2025-04-14T13:21:16.201Z  INFO 1352 --- [hhplus] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HangHaePlusDataSource - Start completed.
+2025-04-14T13:21:16.264Z  INFO 1352 --- [hhplus] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HangHaePlusDataSource)']
 	Database driver: undefined/unknown
 	Database version: 8.0.41
@@ -57,10 +57,10 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-04-14T12:10:21.764Z  INFO 19716 --- [hhplus] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-14T12:10:21.766Z  INFO 19716 --- [hhplus] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-14T12:10:22.896Z  INFO 19716 --- [hhplus] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-04-14T12:10:22.969Z  INFO 19716 --- [hhplus] [    Test worker] k.h.be.server.ServerApplicationTests     : Started ServerApplicationTests in 46.808 seconds (process running for 47.935)
+2025-04-14T13:21:16.984Z  INFO 1352 --- [hhplus] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-14T13:21:16.987Z  INFO 1352 --- [hhplus] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-14T13:21:18.164Z  INFO 1352 --- [hhplus] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-04-14T13:21:18.237Z  INFO 1352 --- [hhplus] [    Test worker] k.h.be.server.ServerApplicationTests     : Started ServerApplicationTests in 46.915 seconds (process running for 48.52)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
