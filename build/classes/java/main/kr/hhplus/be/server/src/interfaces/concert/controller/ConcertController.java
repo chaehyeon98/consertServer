@@ -1,10 +1,10 @@
 package src.interfaces.concert.controller;
 
+import kr.hhplus.be.server.application.concert.service.ConcertService;
+import kr.hhplus.be.server.domain.concert.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import src.application.concert.service.ConcertService;
-import src.domain.concert.entity.*;
 
 import java.math.BigInteger;
 import java.util.List;
