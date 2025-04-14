@@ -1,6 +1,6 @@
-package kr.hhplus.be.server.domain.concert.service;
+package domain.concert.service;
 
-import kr.hhplus.be.server.domain.concert.entity.*;
+import domain.concert.entity.*;
 
 import java.math.BigInteger;
 import java.util.List;

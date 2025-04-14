@@ -1,8 +1,8 @@
-package kr.hhplus.be.server.domain.concert.entity;
+package domain.concert.entity;
 
 import jakarta.persistence.*;
-import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
-import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
+import domain.concert.enums.ReservationStatusEnum;
+import domain.concert.enums.SeatStatusEnum;
 
 import java.math.BigInteger;
 

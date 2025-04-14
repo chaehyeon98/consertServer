@@ -1,4 +1,4 @@
-package kr.hhplus.be.server.domain.concert.enums;
+package domain.concert.enums;
 
 public enum ReservationStatusEnum {
     reserved,

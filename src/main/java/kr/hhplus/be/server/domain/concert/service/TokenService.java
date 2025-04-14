@@ -1,6 +1,6 @@
-package kr.hhplus.be.server.domain.concert.service;
+package domain.concert.service;
 
-import kr.hhplus.be.server.domain.concert.entity.User;
+import domain.concert.entity.User;
 
 public interface TokenService {
 

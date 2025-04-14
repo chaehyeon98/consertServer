@@ -1,9 +1,9 @@
-package kr.hhplus.be.server.domain.concert.repository;
+package domain.concert.repository;
 
-import kr.hhplus.be.server.domain.concert.entity.ConcertDate;
-import kr.hhplus.be.server.domain.concert.entity.Concert;
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
-import kr.hhplus.be.server.domain.concert.entity.Reservation;
+import domain.concert.entity.ConcertDate;
+import domain.concert.entity.Concert;
+import domain.concert.entity.ConcertSeat;
+import domain.concert.entity.Reservation;
 
 import java.math.BigInteger;
 import java.util.List;

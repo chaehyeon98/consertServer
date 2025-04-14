@@ -1,7 +1,7 @@
-package kr.hhplus.be.server.interfaces.concert;
+package interfaces.concert;
 
-import kr.hhplus.be.server.domain.concert.entity.*;
-import kr.hhplus.be.server.domain.concert.service.ConcertService;
+import domain.concert.entity.*;
+import domain.concert.service.ConcertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

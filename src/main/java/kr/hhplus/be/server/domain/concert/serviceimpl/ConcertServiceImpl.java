@@ -1,12 +1,12 @@
-package kr.hhplus.be.server.domain.concert.serviceimpl;
+package domain.concert.serviceimpl;
 
-import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
-import kr.hhplus.be.server.domain.concert.service.ConcertService;
-import kr.hhplus.be.server.domain.concert.entity.*;
-import kr.hhplus.be.server.domain.concert.repository.ConcertRepository;
+import domain.concert.enums.SeatStatusEnum;
+import domain.concert.service.ConcertService;
+import domain.concert.entity.*;
+import domain.concert.repository.ConcertRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import kr.hhplus.be.server.domain.concert.service.TokenService;
+import domain.concert.service.TokenService;
 
 import java.math.BigInteger;
 import java.util.List;

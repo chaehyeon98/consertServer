@@ -1,10 +1,10 @@
-package kr.hhplus.be.server.domain.concert.service;
+package domain.concert.service;
 
 
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
-import kr.hhplus.be.server.domain.concert.entity.Reservation;
-import kr.hhplus.be.server.domain.concert.entity.User;
-import kr.hhplus.be.server.domain.concert.entity.Balance;
+import domain.concert.entity.ConcertSeat;
+import domain.concert.entity.Reservation;
+import domain.concert.entity.User;
+import domain.concert.entity.Balance;
 
 public interface ConcertPayService {
 

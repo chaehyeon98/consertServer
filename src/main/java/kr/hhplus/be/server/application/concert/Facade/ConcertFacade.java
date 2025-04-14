@@ -1,12 +1,12 @@
-package kr.hhplus.be.server.application.concert.Facade;
+package application.concert.Facade;
 
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
-import kr.hhplus.be.server.domain.concert.entity.Reservation;
-import kr.hhplus.be.server.domain.concert.entity.User;
-import kr.hhplus.be.server.domain.concert.service.ConcertPayService;
-import kr.hhplus.be.server.domain.concert.service.ConcertService;
-import kr.hhplus.be.server.domain.concert.service.TokenService;
-import kr.hhplus.be.server.domain.concert.entity.Balance;
+import domain.concert.entity.ConcertSeat;
+import domain.concert.entity.Reservation;
+import domain.concert.entity.User;
+import domain.concert.service.ConcertPayService;
+import domain.concert.service.ConcertService;
+import domain.concert.service.TokenService;
+import domain.concert.entity.Balance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

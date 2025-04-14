@@ -1,12 +1,12 @@
-package kr.hhplus.be.server.domain.concert.repositoryimpl;
+package domain.concert.repositoryimpl;
 
 import org.springframework.stereotype.Repository;
 
-import kr.hhplus.be.server.domain.concert.entity.ConcertDate;
-import kr.hhplus.be.server.domain.concert.entity.Concert;
-import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
-import kr.hhplus.be.server.domain.concert.entity.Reservation;
-import kr.hhplus.be.server.domain.concert.repository.ConcertRepository;
+import domain.concert.entity.ConcertDate;
+import domain.concert.entity.Concert;
+import domain.concert.entity.ConcertSeat;
+import domain.concert.entity.Reservation;
+import domain.concert.repository.ConcertRepository;
 
 import java.math.BigInteger;
 import java.util.List;
