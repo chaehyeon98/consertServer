@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @RestController
@@ -30,25 +29,25 @@ public class ConcertController {
     }
 
     @GetMapping({"/get/date/{concert_id}"})
-    public ResponseEntity<List<ConcertDate>> getDate(@PathVariable BigInteger concert_id, User user) {
+    public ResponseEntity<List<ConcertDate>> getDate(@PathVariable long concert_id, User user) {
 
-        if(concert_id == null)
+        if(concert_id == 0)
             throw new RuntimeException("concert_id is empty");
 
         return ResponseEntity.ok(concertService.getDate(concert_id, user));
     }
 
     @GetMapping({"/get/seat/{concert_date_id}"})
-    public ResponseEntity<List<ConcertSeat>> getSeat(@PathVariable BigInteger concert_date_id, User user) {
+    public ResponseEntity<List<ConcertSeat>> getSeat(@PathVariable long concert_date_id, User user) {
 
-        if(concert_date_id == null)
+        if(concert_date_id == 0)
             throw new RuntimeException("concert_date_id is empty");
 
         return ResponseEntity.ok(concertFacade.getSeatList(user, concert_date_id));
     }
 
     @PostMapping({"/reservation"})
-    public ResponseEntity<Reservation>  getReservation(@RequestBody User user, BigInteger seat_id) {
+    public ResponseEntity<Reservation>  getReservation(@RequestBody User user, long seat_id) {
         return ResponseEntity.ok(concertFacade.getReservation(user, seat_id));
     }
 

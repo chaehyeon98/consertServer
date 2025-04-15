@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.math.BigInteger;
 import java.util.Date;
 
 @Entity
@@ -13,7 +12,7 @@ import java.util.Date;
 public class User {
 
     @Id
-    private BigInteger user_id;
+    private long user_id;
 
     @Column(nullable = true)
     private String token;
@@ -21,7 +20,7 @@ public class User {
     @Column(nullable = true)
     private Date token_expiration_time;
 
-    public BigInteger getUser_id() {
+    public long getUser_id() {
         return user_id;
     }
 }

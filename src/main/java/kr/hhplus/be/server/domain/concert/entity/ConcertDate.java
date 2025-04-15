@@ -2,7 +2,6 @@ package domain.concert.entity;
 
 import jakarta.persistence.*;
 
-import java.math.BigInteger;
 import java.util.Date;
 
 @Entity
@@ -10,10 +9,10 @@ import java.util.Date;
 public class ConcertDate {
 
     @Id
-    private BigInteger concert_date_id;
+    private long concert_date_id;
 
     @JoinColumn(nullable = false)
-    private BigInteger concert_id;
+    private long concert_id;
 
     @Column(nullable = false)
     private Date concert_date;

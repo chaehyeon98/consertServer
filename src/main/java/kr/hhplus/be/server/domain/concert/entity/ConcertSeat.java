@@ -3,17 +3,15 @@ package domain.concert.entity;
 import domain.concert.enums.SeatStatusEnum;
 import jakarta.persistence.*;
 
-import java.math.BigInteger;
-
 @Entity
 @Table(name = "ConcertSeat")
 public class ConcertSeat {
 
     @Id
-    private BigInteger seat_id;
+    private long seat_id;
 
     @JoinColumn(nullable = false)
-    private String concert_date_id;
+    private long concert_date_id;
 
     @Column
     private long price;
@@ -23,13 +21,13 @@ public class ConcertSeat {
     private SeatStatusEnum status = SeatStatusEnum.available;
 
     @Column(nullable = false)
-    private BigInteger seat_number;
+    private long seat_number;
 
     public ConcertSeat() {
 
     }
 
-    public ConcertSeat(BigInteger seat_id, String concert_date_id, long price, SeatStatusEnum status, BigInteger seat_number) {
+    public ConcertSeat(long seat_id, long concert_date_id, long price, SeatStatusEnum status, long seat_number) {
         this.seat_id = seat_id;
         this.concert_date_id = concert_date_id;
         this.price = price;
@@ -37,7 +35,7 @@ public class ConcertSeat {
         this.seat_number = seat_number;
     }
 
-    public BigInteger getSeat_number() {
+    public long getSeat_number() {
         return seat_number;
     }
 
@@ -45,7 +43,7 @@ public class ConcertSeat {
         return price;
     }
 
-    public BigInteger getSeat_id() {
+    public long getSeat_id() {
         return seat_id;
     }
 

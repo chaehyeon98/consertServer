@@ -4,13 +4,15 @@ import domain.concert.entity.Balance;
 import domain.concert.entity.ConcertSeat;
 import domain.concert.entity.Reservation;
 import domain.concert.entity.User;
-import domain.concert.service.*;
+import domain.concert.service.ConcertPayService;
+import domain.concert.service.ConcertSeatService;
+import domain.concert.service.ReservationService;
+import domain.concert.service.TokenService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @Service
@@ -68,7 +70,7 @@ public class ConcertFacade {
 
     }
 
-    public List<ConcertSeat> getSeatList(User user, BigInteger concert_date_id){
+    public List<ConcertSeat> getSeatList(User user, long concert_date_id){
         
         //토큰 검증
         tokenService.validateToken(user);
@@ -77,7 +79,7 @@ public class ConcertFacade {
         return concertSeatService.getSeatList(concert_date_id);
     }
 
-    public Reservation getReservation(User user, BigInteger seat_id) {
+    public Reservation getReservation(User user, long seat_id) {
 
         //토큰 검증
         tokenService.validateToken(user);

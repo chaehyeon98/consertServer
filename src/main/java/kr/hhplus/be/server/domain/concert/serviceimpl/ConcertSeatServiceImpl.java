@@ -6,7 +6,6 @@ import domain.concert.enums.SeatStatusEnum;
 import domain.concert.repository.ConcertSeatRepository;
 import domain.concert.service.ConcertSeatService;
 
-import java.math.BigInteger;
 import java.util.List;
 
 public class ConcertSeatServiceImpl implements ConcertSeatService {
@@ -14,13 +13,13 @@ public class ConcertSeatServiceImpl implements ConcertSeatService {
     ConcertSeatRepository concertSeatRepository;
 
     @Override
-    public List<ConcertSeat> getSeatList(BigInteger concert_date_id) {
+    public List<ConcertSeat> getSeatList(long concert_date_id) {
 
         return concertSeatRepository.getSeatList(concert_date_id);
     }
 
     @Override
-    public ConcertSeat getConcertSeat(BigInteger seat_id) {
+    public ConcertSeat getConcertSeat(long seat_id) {
         return concertSeatRepository.getSeat(seat_id);
     }
 
@@ -36,7 +35,7 @@ public class ConcertSeatServiceImpl implements ConcertSeatService {
     }
 
     @Override
-    public ConcertSeat updateSeat(User user, BigInteger seat_id) {
+    public ConcertSeat updateSeat(User user, long seat_id) {
 
         ConcertSeat seat = concertSeatRepository.getSeat(seat_id);
 

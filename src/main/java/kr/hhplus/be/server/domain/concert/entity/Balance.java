@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class Balance {
 
     @Id
-    private int user_id;
+    private long user_id;
 
     @Column(columnDefinition = "MONEY DEFAULT 0")
     private long amount;
@@ -19,7 +19,7 @@ public class Balance {
 
     }
 
-    public Balance(int user_id, long amount) {
+    public Balance(long user_id, long amount) {
         this.user_id = user_id;
         this.amount = amount;
     }

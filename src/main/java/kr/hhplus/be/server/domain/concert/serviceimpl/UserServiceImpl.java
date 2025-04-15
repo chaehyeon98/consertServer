@@ -5,20 +5,18 @@ import domain.concert.repository.UserRepository;
 import domain.concert.service.UserService;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
-
 @Service
 public class UserServiceImpl implements UserService {
 
     UserRepository userRepository;
 
     @Override
-    public Balance getBalance(BigInteger user_id) {
+    public Balance getBalance(long user_id) {
         return userRepository.getBalance(user_id);
     }
 
     @Override
-    public void setBalance(BigInteger user_id, long amount) {
+    public void setBalance(long user_id, long amount) {
 
         Balance balance = userRepository.getBalance(user_id);
 
