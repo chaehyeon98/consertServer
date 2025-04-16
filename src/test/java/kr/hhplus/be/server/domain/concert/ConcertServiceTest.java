@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+
 @SpringBootTest
 @ComponentScan(basePackages = "kr.hhplus.be.server")
 public class ConcertServiceTest {
@@ -33,14 +37,12 @@ public class ConcertServiceTest {
     @DisplayName("콘서트목록조회 usecase 테스트")
     public void getConcertTest(){
 
-        System.out.println("concertService is " + concertService);
-        System.out.println("concertRepository is " + concertRepository);
         // when
-        //List<Concert> result = concertService.getConcert();
+        List<Concert> result = concertService.getConcert();
 
         // then
-        //assertThat(result).isNotEmpty();
-        //assertThat(result.get(0).getConcert_name()).isEqualTo("요루시카");
+        assertThat(result).isNotEmpty();
+        assertThat(result.get(0).getConcert_name()).isEqualTo("요루시카");
 
     }
 

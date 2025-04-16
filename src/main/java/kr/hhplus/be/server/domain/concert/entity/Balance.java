@@ -12,7 +12,7 @@ public class Balance {
     @Id
     private long user_id;
 
-    @Column(columnDefinition = "MONEY DEFAULT 0")
+    @Column(columnDefinition = "DECIMAL DEFAULT 0")
     private long amount;
 
     public Balance() {
