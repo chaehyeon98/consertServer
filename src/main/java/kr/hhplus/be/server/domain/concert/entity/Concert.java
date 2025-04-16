@@ -1,4 +1,4 @@
-package domain.concert.entity;
+package kr.hhplus.be.server.domain.concert.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,5 +23,13 @@ public class Concert {
 
     public Concert() {
 
+    }
+
+    public long getConcert_id() {
+        return concert_id;
+    }
+
+    public String getConcert_name() {
+        return concert_name;
     }
 }

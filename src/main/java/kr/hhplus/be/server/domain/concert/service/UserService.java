@@ -1,6 +1,6 @@
-package domain.concert.service;
+package kr.hhplus.be.server.domain.concert.service;
 
-import domain.concert.entity.Balance;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
 
 public interface UserService {
 

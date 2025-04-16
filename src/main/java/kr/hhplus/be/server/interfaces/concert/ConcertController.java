@@ -1,8 +1,8 @@
-package interfaces.concert;
+package kr.hhplus.be.server.interfaces.concert;
 
-import application.concert.Facade.ConcertFacade;
-import domain.concert.entity.*;
-import domain.concert.service.ConcertService;
+import kr.hhplus.be.server.application.concert.Facade.ConcertFacade;
+import kr.hhplus.be.server.domain.concert.entity.*;
+import kr.hhplus.be.server.domain.concert.service.ConcertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,8 +24,8 @@ public class ConcertController {
     }
 
     @GetMapping({"/get"})
-    public ResponseEntity<List<Concert>> getConcert(String name) {
-        return ResponseEntity.ok(concertService.getConcert(name));
+    public ResponseEntity<List<Concert>> getConcert() {
+        return ResponseEntity.ok(concertService.getConcert());
     }
 
     @GetMapping({"/get/date/{concert_id}"})

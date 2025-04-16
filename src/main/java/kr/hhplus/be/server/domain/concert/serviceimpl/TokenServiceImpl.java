@@ -1,7 +1,7 @@
-package domain.concert.serviceimpl;
+package kr.hhplus.be.server.domain.concert.serviceimpl;
 
-import domain.concert.entity.User;
-import domain.concert.service.TokenService;
+import kr.hhplus.be.server.domain.concert.entity.User;
+import kr.hhplus.be.server.domain.concert.service.TokenService;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,13 +1,15 @@
-package domain.concert.serviceimpl;
+package kr.hhplus.be.server.domain.concert.serviceimpl;
 
-import domain.concert.entity.ConcertSeat;
-import domain.concert.entity.User;
-import domain.concert.enums.SeatStatusEnum;
-import domain.concert.repository.ConcertSeatRepository;
-import domain.concert.service.ConcertSeatService;
+import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
+import kr.hhplus.be.server.domain.concert.entity.User;
+import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
+import kr.hhplus.be.server.domain.concert.repository.ConcertSeatRepository;
+import kr.hhplus.be.server.domain.concert.service.ConcertSeatService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ConcertSeatServiceImpl implements ConcertSeatService {
 
     ConcertSeatRepository concertSeatRepository;

@@ -1,4 +1,4 @@
-package domain.concert.entity;
+package kr.hhplus.be.server.domain.concert.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -42,5 +42,9 @@ public class Balance {
         }
 
         this.amount += amount;
+    }
+
+    public long getUser_id() {
+        return user_id;
     }
 }

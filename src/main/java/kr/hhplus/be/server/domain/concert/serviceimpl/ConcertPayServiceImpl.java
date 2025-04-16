@@ -1,13 +1,11 @@
-package domain.concert.serviceimpl;
+package kr.hhplus.be.server.domain.concert.serviceimpl;
 
-import domain.concert.entity.Balance;
-import domain.concert.entity.ConcertSeat;
-import domain.concert.entity.Reservation;
-import domain.concert.entity.User;
-import domain.concert.enums.ReservationStatusEnum;
-import domain.concert.repository.ConcertPayRepository;
-import domain.concert.repository.UserRepository;
-import domain.concert.service.ConcertPayService;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
+import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
+import kr.hhplus.be.server.domain.concert.entity.User;
+import kr.hhplus.be.server.domain.concert.repository.ConcertPayRepository;
+import kr.hhplus.be.server.domain.concert.repository.UserRepository;
+import kr.hhplus.be.server.domain.concert.service.ConcertPayService;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,20 +14,6 @@ public class ConcertPayServiceImpl implements ConcertPayService {
     private ConcertPayRepository concertPayRepository;
 
     private UserRepository userRepository;
-
-    @Override
-    public void setStatus(Reservation reservation) {
-
-        //결제/예약 상태변경
-        reservation.setStatus(ReservationStatusEnum.paid);
-
-        if(concertPayRepository.update(reservation) <= 0) {
-
-            throw new IllegalArgumentException("결제오류");
-        }
-
-    }
-
     @Override
     public Balance subtractBalance(User user, ConcertSeat concertSeat) {
 

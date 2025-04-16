@@ -1,19 +1,17 @@
-package domain.concert.repository;
+package kr.hhplus.be.server.domain.concert.repository;
 
-import domain.concert.entity.Concert;
-import domain.concert.entity.Reservation;
+import kr.hhplus.be.server.domain.concert.entity.Concert;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 
+@Repository
 public interface ConcertRepository  extends JpaRepository<Concert, Long> {
 
-    @Query("Select concert_id, concert_name from Concert where concert_name = :name")
-    List<Concert> getConcert(@Param("name") String name);
-
-    int insertReservation(Reservation reservation);
+    @Query("Select concert_id, concert_name from Concert")
+    List<Concert> getConcert();
 
 }

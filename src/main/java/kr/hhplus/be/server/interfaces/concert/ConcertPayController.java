@@ -1,8 +1,8 @@
-package interfaces.concert;
+package kr.hhplus.be.server.interfaces.concert;
 
-import application.concert.Facade.ConcertFacade;
-import domain.concert.entity.Reservation;
-import domain.concert.entity.User;
+import kr.hhplus.be.server.application.concert.Facade.ConcertFacade;
+import kr.hhplus.be.server.domain.concert.entity.Reservation;
+import kr.hhplus.be.server.domain.concert.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

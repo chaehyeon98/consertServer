@@ -1,7 +1,7 @@
-package domain.concert.entity;
+package kr.hhplus.be.server.domain.concert.entity;
 
-import domain.concert.enums.SeatStatusEnum;
 import jakarta.persistence.*;
+import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 @Entity
 @Table(name = "ConcertSeat")

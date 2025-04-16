@@ -1,8 +1,8 @@
-package domain.concert.entity;
+package kr.hhplus.be.server.domain.concert.entity;
 
-import domain.concert.enums.ReservationStatusEnum;
-import domain.concert.enums.SeatStatusEnum;
 import jakarta.persistence.*;
+import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
+import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 @Entity
 @Table(name = "Reservation")
@@ -52,4 +52,15 @@ public class Reservation {
         return seat_id;
     }
 
+    public long getReservation_id() {
+        return reservation_id;
+    }
+
+    public long getSeat_number() {
+        return seat_number;
+    }
+
+    public long getUser_id() {
+        return user_id;
+    }
 }

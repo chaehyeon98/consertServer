@@ -1,8 +1,8 @@
-package domain.concert.serviceimpl;
+package kr.hhplus.be.server.domain.concert.serviceimpl;
 
-import domain.concert.entity.Balance;
-import domain.concert.repository.UserRepository;
-import domain.concert.service.UserService;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
+import kr.hhplus.be.server.domain.concert.repository.UserRepository;
+import kr.hhplus.be.server.domain.concert.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

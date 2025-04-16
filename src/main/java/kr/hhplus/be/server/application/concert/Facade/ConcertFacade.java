@@ -1,13 +1,13 @@
-package application.concert.Facade;
+package kr.hhplus.be.server.application.concert.Facade;
 
-import domain.concert.entity.Balance;
-import domain.concert.entity.ConcertSeat;
-import domain.concert.entity.Reservation;
-import domain.concert.entity.User;
-import domain.concert.service.ConcertPayService;
-import domain.concert.service.ConcertSeatService;
-import domain.concert.service.ReservationService;
-import domain.concert.service.TokenService;
+import kr.hhplus.be.server.domain.concert.entity.Balance;
+import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
+import kr.hhplus.be.server.domain.concert.entity.Reservation;
+import kr.hhplus.be.server.domain.concert.entity.User;
+import kr.hhplus.be.server.domain.concert.service.ConcertPayService;
+import kr.hhplus.be.server.domain.concert.service.ConcertSeatService;
+import kr.hhplus.be.server.domain.concert.service.ReservationService;
+import kr.hhplus.be.server.domain.concert.service.TokenService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +57,7 @@ public class ConcertFacade {
             concertSeatService.setStatus(concertSeat);
             
             //결제/예약 상태변경
-            concertPayService.setStatus(reservation);
+            reservationService.setStatus(reservation);
         }catch (Exception e){
 
             //결제실패시 잔액을 원래대로 되돌림

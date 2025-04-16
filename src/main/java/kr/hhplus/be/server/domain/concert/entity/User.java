@@ -1,4 +1,4 @@
-package domain.concert.entity;
+package kr.hhplus.be.server.domain.concert.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
