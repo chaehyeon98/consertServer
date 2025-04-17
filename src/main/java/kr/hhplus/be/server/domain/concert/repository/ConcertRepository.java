@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ConcertRepository  extends JpaRepository<Concert, Long> {
 
-    @Query("Select concert_id, concert_name from Concert")
+    @Query("SELECT c FROM Concert c")
     List<Concert> getConcert();
 
 }

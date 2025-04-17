@@ -1,18 +1,15 @@
 package kr.hhplus.be.server.domain.concert.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Balance")
+@Table(name = "Balance", indexes = @Index(name = "idx_user_id", columnList = "user_id"))
 public class Balance {
 
     @Id
     private long user_id;
 
-    @Column(columnDefinition = "MONEY DEFAULT 0")
+    @Column(columnDefinition = "DECIMAL DEFAULT 0")
     private long amount;
 
     public Balance() {
@@ -46,5 +43,9 @@ public class Balance {
 
     public long getUser_id() {
         return user_id;
+    }
+
+    public long getAmount() {
+        return amount;
     }
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 @Entity
-@Table(name = "ConcertSeat")
+@Table(name = "ConcertSeat", indexes = @Index(name = "idx_seat_id_and_concert_date_id", columnList = "seat_id, concert_date_id"))
 public class ConcertSeat {
 
     @Id
@@ -52,6 +52,10 @@ public class ConcertSeat {
     }
 
     public void setStatus(SeatStatusEnum status) {
+
+        if(this.status == SeatStatusEnum.blocked)
+            throw new IllegalArgumentException("이미 선택된 좌석");
+
         this.status = status;
     }
 }

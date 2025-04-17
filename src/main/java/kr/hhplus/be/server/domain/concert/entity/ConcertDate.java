@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "ConcertDate")
+@Table(name = "ConcertDate", indexes = @Index(name = "idx_concert_id", columnList = "concert_id"))
 public class ConcertDate {
 
     @Id

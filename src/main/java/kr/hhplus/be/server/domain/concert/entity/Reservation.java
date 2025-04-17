@@ -2,13 +2,13 @@ package kr.hhplus.be.server.domain.concert.entity;
 
 import jakarta.persistence.*;
 import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
-import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 @Entity
-@Table(name = "Reservation")
+@Table(name = "Reservation", indexes = @Index(name = "idx_reservation_id", columnList = "reservation_id", unique = true))
 public class Reservation {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long reservation_id;
 
     @JoinColumn(nullable = false)
@@ -28,11 +28,9 @@ public class Reservation {
 
     }
 
-    public Reservation(long seat_id, long user_id, long seat_number, SeatStatusEnum status) {
+    public Reservation(long seat_id, long user_id, long seat_number) {
 
-        if (status == SeatStatusEnum.blocked) {
-            throw new IllegalArgumentException("예약 불가");
-        } else if(seat_id == 0 || seat_id < 0) {
+         if(seat_id == 0 || seat_id < 0) {
             throw new IllegalArgumentException("seat_id 오류");
         } else if(seat_number == 0 || seat_number < 0) {
             throw new IllegalArgumentException("좌석번호 오류");
@@ -43,6 +41,14 @@ public class Reservation {
         this.seat_number = seat_number;
         this.status = ReservationStatusEnum.reserved;
 
+    }
+
+    public Reservation(long reservation_id, long seat_id, long user_id, ReservationStatusEnum status, long seat_number) {
+        this.reservation_id = reservation_id;
+        this.seat_id = seat_id;
+        this.user_id = user_id;
+        this.status = status;
+        this.seat_number = seat_number;
     }
 
     public void setStatus(ReservationStatusEnum status) {
@@ -62,5 +68,9 @@ public class Reservation {
 
     public long getUser_id() {
         return user_id;
+    }
+
+    public ReservationStatusEnum getStatus() {
+        return status;
     }
 }

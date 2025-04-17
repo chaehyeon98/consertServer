@@ -5,6 +5,7 @@ import kr.hhplus.be.server.domain.concert.entity.User;
 import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 import kr.hhplus.be.server.domain.concert.repository.ConcertSeatRepository;
 import kr.hhplus.be.server.domain.concert.service.ConcertSeatService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 @Service
 public class ConcertSeatServiceImpl implements ConcertSeatService {
 
+    @Autowired
     ConcertSeatRepository concertSeatRepository;
 
     @Override
@@ -30,7 +32,7 @@ public class ConcertSeatServiceImpl implements ConcertSeatService {
 
         concertSeat.setStatus(SeatStatusEnum.blocked);
 
-        if(concertSeatRepository.updateSeat(concertSeat) <= 0) {
+        if(concertSeatRepository.updateSeat(concertSeat.getStatus(), concertSeat.getSeat_id()) <= 0) {
 
             throw new IllegalArgumentException("좌석상태 변경 오류");
         }
@@ -43,7 +45,7 @@ public class ConcertSeatServiceImpl implements ConcertSeatService {
 
         seat.setStatus(SeatStatusEnum.blocked);
 
-        if(concertSeatRepository.updateSeat(seat) <= 0){
+        if(concertSeatRepository.updateSeat(seat.getStatus(), seat.getSeat_id()) <= 0){
             throw new IllegalArgumentException("좌석 예약 오류");
         }
 
