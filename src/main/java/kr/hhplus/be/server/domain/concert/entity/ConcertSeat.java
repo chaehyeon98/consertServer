@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 @Entity
-@Table(name = "ConcertSeat")
+@Table(name = "ConcertSeat", indexes = @Index(name = "idx_seat_id_and_concert_date_id", columnList = "seat_id, concert_date_id"))
 public class ConcertSeat {
 
     @Id

@@ -5,7 +5,7 @@ import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
 import kr.hhplus.be.server.domain.concert.enums.SeatStatusEnum;
 
 @Entity
-@Table(name = "Reservation")
+@Table(name = "Reservation", indexes = @Index(name = "idx_reservation_id", columnList = "reservation_id", unique = true))
 public class Reservation {
 
     @Id
