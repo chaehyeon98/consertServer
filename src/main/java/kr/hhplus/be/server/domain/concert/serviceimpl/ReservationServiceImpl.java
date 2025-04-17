@@ -6,22 +6,20 @@ import kr.hhplus.be.server.domain.concert.entity.User;
 import kr.hhplus.be.server.domain.concert.enums.ReservationStatusEnum;
 import kr.hhplus.be.server.domain.concert.repository.ReservationRepository;
 import kr.hhplus.be.server.domain.concert.service.ReservationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
 
+    @Autowired
     ReservationRepository reservationRepository;
 
     @Override
     public Reservation setReservation(ConcertSeat seat, User user) {
-        Reservation reservation = new Reservation(seat.getSeat_id(), user.getUser_id(), seat.getSeat_number(), seat.getStatus());
+        Reservation reservation = new Reservation(seat.getSeat_id(), user.getUser_id(), seat.getSeat_number());
 
-        if(reservationRepository.insertReservation(reservation) <= 0){
-            throw new IllegalArgumentException("좌석 예약 오류");
-        }
-
-        return reservation;
+        return reservationRepository.save(reservation);
     }
 
     @Override
@@ -30,7 +28,7 @@ public class ReservationServiceImpl implements ReservationService {
         //결제/예약 상태변경
         reservation.setStatus(ReservationStatusEnum.paid);
 
-        if(reservationRepository.update(reservation) <= 0) {
+        if(reservationRepository.update(reservation.getStatus(), reservation.getReservation_id()) <= 0) {
 
             throw new IllegalArgumentException("결제오류");
         }

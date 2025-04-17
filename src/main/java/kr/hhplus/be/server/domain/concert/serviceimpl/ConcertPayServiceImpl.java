@@ -3,8 +3,8 @@ package kr.hhplus.be.server.domain.concert.serviceimpl;
 import kr.hhplus.be.server.domain.concert.entity.Balance;
 import kr.hhplus.be.server.domain.concert.entity.ConcertSeat;
 import kr.hhplus.be.server.domain.concert.entity.User;
+import kr.hhplus.be.server.domain.concert.repository.BalanceRepository;
 import kr.hhplus.be.server.domain.concert.repository.ConcertPayRepository;
-import kr.hhplus.be.server.domain.concert.repository.UserRepository;
 import kr.hhplus.be.server.domain.concert.service.ConcertPayService;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class ConcertPayServiceImpl implements ConcertPayService {
 
     private ConcertPayRepository concertPayRepository;
 
-    private UserRepository userRepository;
+    private BalanceRepository userRepository;
     @Override
     public Balance subtractBalance(User user, ConcertSeat concertSeat) {
 

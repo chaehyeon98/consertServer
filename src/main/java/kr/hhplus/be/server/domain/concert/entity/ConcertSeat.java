@@ -52,6 +52,10 @@ public class ConcertSeat {
     }
 
     public void setStatus(SeatStatusEnum status) {
+
+        if(this.status == SeatStatusEnum.blocked)
+            throw new IllegalArgumentException("이미 선택된 좌석");
+
         this.status = status;
     }
 }

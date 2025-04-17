@@ -20,6 +20,18 @@ public class User {
     @Column(nullable = true)
     private Date token_expiration_time;
 
+    public User() {}
+
+    public User(long user_id) {
+        this.user_id = user_id;
+    }
+
+    public User(long user_id, String token, Date token_expiration_time) {
+        this.user_id = user_id;
+        this.token = token;
+        this.token_expiration_time = token_expiration_time;
+    }
+
     public long getUser_id() {
         return user_id;
     }
