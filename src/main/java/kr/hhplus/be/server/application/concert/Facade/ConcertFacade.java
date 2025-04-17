@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class ConcertFacade {
     @Autowired
     private ReservationService reservationService;
 
+    @Transactional
     public void pay(User user, Reservation reservation) {
 
         //콘서트 좌석조회
@@ -79,6 +81,7 @@ public class ConcertFacade {
         return concertSeatService.getSeatList(concert_date_id);
     }
 
+    @Transactional
     public Reservation getReservation(User user, long seat_id) {
 
         //토큰 검증
