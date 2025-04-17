@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 
         balance.setAmount(amount);
 
-        if(userRepository.setBalance(balance) <= 0) {
+        if(userRepository.setBalance(balance.getUser_id(), balance.getAmount()) <= 0) {
             throw new IllegalArgumentException("잔액 충전 실패");
         }
     }

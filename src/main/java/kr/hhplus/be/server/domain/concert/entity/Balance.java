@@ -44,4 +44,8 @@ public class Balance {
     public long getUser_id() {
         return user_id;
     }
+
+    public long getAmount() {
+        return amount;
+    }
 }

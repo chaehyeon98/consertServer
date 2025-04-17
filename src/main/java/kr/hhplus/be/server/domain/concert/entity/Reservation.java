@@ -43,6 +43,14 @@ public class Reservation {
 
     }
 
+    public Reservation(long reservation_id, long seat_id, long user_id, ReservationStatusEnum status, long seat_number) {
+        this.reservation_id = reservation_id;
+        this.seat_id = seat_id;
+        this.user_id = user_id;
+        this.status = status;
+        this.seat_number = seat_number;
+    }
+
     public void setStatus(ReservationStatusEnum status) {
         this.status = status;
     }

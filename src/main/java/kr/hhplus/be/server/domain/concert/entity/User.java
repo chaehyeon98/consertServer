@@ -35,4 +35,8 @@ public class User {
     public long getUser_id() {
         return user_id;
     }
+
+    public String getToken() {
+        return this.token;
+    }
 }
